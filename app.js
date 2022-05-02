@@ -27,6 +27,8 @@ const initializeDBandServer = async () => {
 };
 initializeDBandServer();
 
+/* ------ DataBase Tables FOR MORE Clarity ----------
+
 app.get("/usertable/", async (require, response) => {
   const getuserTable = `
     SELECT * FROM user;`;
@@ -57,6 +59,7 @@ app.get("/liketable/", async (require, response) => {
   const data = await database.all(getlikeTable);
   response.send(data);
 });
+---------------------------------------------------*/
 
 function authenticationToken(request, response, next) {
   let jwtToken;
